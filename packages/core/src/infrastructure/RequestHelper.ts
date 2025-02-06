@@ -327,6 +327,8 @@ export function post<T extends ResponseBodyTypes>() {
       ? appendFormFromObject(options as Record<string, OptionValueType>)
       : options;
 
+    //Edit was made here guys!!
+    log.info(body)
     const response = await service.requester.post(endpoint, {
       searchParams,
       body,
